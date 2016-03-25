@@ -47,6 +47,9 @@ internal class SideMenuTransition: UIPercentDrivenInteractiveTransition, UIViewC
     }
     
     class func handlePresentMenuPan(pan: UIPanGestureRecognizer) {
+        if !SideMenuManager.enableGestures {
+            return
+        }
         // how much distance have we panned in reference to the parent view?
         if let view = viewControllerForPresentedMenu != nil ? viewControllerForPresentedMenu?.view : pan.view {
             let transform = view.transform

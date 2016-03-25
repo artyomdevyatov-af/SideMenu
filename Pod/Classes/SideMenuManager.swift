@@ -43,6 +43,7 @@ public class SideMenuManager {
     public static weak var menuRightSwipeToDismissGesture: UIPanGestureRecognizer?
     public static var menuParallaxStrength: Int = 0
     public static var menuFadeStatusBar = true
+    public static var enableGestures = true
     
     // Note: if you want cells in a UITableViewController menu to look good, make them a subclass of UITableViewVibrantCell!
     public static var menuBlurEffectStyle: UIBlurEffectStyle? {
